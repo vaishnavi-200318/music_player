@@ -1,7 +1,10 @@
 
 import { useRef, useState } from 'react';
-
+import './App.css';
 import './App1.css';
+import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 
 
@@ -56,19 +59,49 @@ function App1() {
     songName:'Chasing',
     songArtist:'NEFFEX',
     songSrc:'./assets/songs/Chasing - NEFFEX.mp3',
-    songAvatar:'./assets/images/image1.jpg'
+    songAvatar:'./assets/images/chase.jpg'
     },
-    {
-      songName:'Apna Bana Le',
-    songArtist:'Arjith Singh',
-    songSrc:'./assets/songs/Apna Bana Le.webm',
-    songAvatar:'./assets/images/image2.jpg'
-    },
-    {songName:'AURORA',
-    songArtist:'NaN',
+  {
+    songName:'Blank space',
+  songArtist:'Taylor Swift',
+  songSrc:'./assets/songs/Blank_space.mp3',
+  songAvatar:'./assets/images/taylorswift.jpg'
+  },
+  {songName:'Runaway',
+songArtist:'Aurora',
+songSrc:'./assets/songs/AURORA - Runaway (Lyrics).mp3',
+songAvatar:'./assets/images/Auora.jpg'
+},
+  {songName:'Catch Me If I Fall',
+    songArtist:'NEFFEX',
+    songSrc:'./assets/songs/Catch Me If I Fall - NEFFEX.mp3',
+    songAvatar:'./assets/images/neffex.jpg'
+  },
+  {songName:'Anti Hero',
+  songArtist:'Taylor Swift',
+  songSrc:'./assets/songs/Anti_hero.mp3',
+  songAvatar:'./assets/images/taylorswift.jpg'
+ },
+ {songName:'Runaway',
+    songArtist:'Aurora',
     songSrc:'./assets/songs/AURORA - Runaway (Lyrics).mp3',
-    songAvatar:'./assets/images/image3.jpg'
-  }
+    songAvatar:'./assets/images/image2.jpg'
+  },
+{songName:'Lavender Haze',
+songArtist:'Taylor Swift',
+songSrc:'./assets/songs/Lavender.mp3',
+songAvatar:'./assets/images/taylorswift.jpg'
+},
+{songName:'Apna Bana Le',
+songArtist:'Arjith Singh',
+songSrc:'./assets/songs/Apna Bana Le.webm',
+songAvatar:'./assets/images/image7.jpg'
+},
+{songName:'Sun Mahi(English version)',
+songArtist:'Armaan Malik',
+songSrc:'./assets/songs/Sun mahi.mp3',
+songAvatar:'./assets/images/Armaan.jpg'
+}
   ]
 
   const handleNextSong=()=>{
@@ -121,7 +154,7 @@ const handleAudioUpdate =() =>{
   setAudioProgress(isNaN(progress)? 0:progress)
 }
 
-const vidArray = ['./assets/Vedios/video1.mp4','./assets/Vedios/video2.mp4','./assets/Vedios/video3.mp4','./assets/Vedios/video4.mp4','./assets/Vedios/video5.mp4','./assets/Vedios/video6.mp4'];
+const vidArray = ['./assets/Vedios/video2.mp4','./assets/Vedios/video5.mp4','./assets/Vedios/video3.mp4','./assets/Vedios/video4.mp4','./assets/Vedios/video1.mp4','./assets/Vedios/video6.mp4'];
 
 const handleChangeBackground=()=>{
   if(videoIndex >= vidArray.length-1){
@@ -133,12 +166,12 @@ const handleChangeBackground=()=>{
 
   return (
    <>
-   
+   <Link to="/more" className='l1'>MoreInfo</Link>
     <div className='container'>
       <audio src='./assets/songs/Chasing - NEFFEX.mp3' ref={currentAudio} onEnded={handleNextSong} onTimeUpdate=
       {handleAudioUpdate}></audio>
       <video src={vidArray[videoIndex]}loop muted autoPlay className='backgroundVideo'></video>
-      <div className="blackScreen"></div>
+      
         <div className='music-Container'>
           <p className='MusicPlayer'>SONORA</p>
           <p className='Music-Head-Name'>{curreMusicDetails.songName}</p>

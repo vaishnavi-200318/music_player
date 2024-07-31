@@ -1,0 +1,60 @@
+
+.all{
+    background-image: url('//music-player/public/assets/images/bg4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+  background-color: #250738;
+}
+.artist{
+    width: 100%; /* Set the desired width of the container */
+    height: 300px; /* Set the desired height of the container */
+    display: flex;
+    justify-content: left;
+   
+  }
+  .artistalternate {
+    flex-direction: row-reverse; /* Reverse the image and description order */
+  }
+
+.n2{
+  padding-left: 0.5px;
+  margin-top: 25px;
+  font-family: Arial, sans-serif;
+}
+  
+.i1{
+  width:180px;
+  height: 250px;
+  margin-top: 20px;
+  margin-left: 1px;
+  border-radius: 50%;
+}
+    
+
+.p2{
+  margin-top: 5px;
+  padding-left:20px;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+
+}
+
+.top-bar{
+  margin-top: 10px;
+  margin: 0px;
+    padding: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #250738; 
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 10% 20% rgba(239, 234, 234, 0.242);
+}
+.bar{
+  margin-left: 20px;
+  text-align: left;
+  margin-bottom: 5px;
+}

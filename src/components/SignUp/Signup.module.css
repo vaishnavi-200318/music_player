@@ -2,7 +2,9 @@
     height: 100%;
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to right, #9900ff, #cc80ff);
+    background-image: url('//music-player/public/assets/images/bg2.webp');
+    background-repeat: no-repeat;
+    background-size: cover ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +14,7 @@
     min-width: 480px;
     height: fit-content;
     width: fit-content;
-    background-color: #fff;
+    backdrop-filter: blur(10px);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     padding: 30px;
     border-radius: 10px;
@@ -25,6 +27,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 90%;
   }
   
   .footer .error {
@@ -37,13 +40,14 @@
   .footer button {
     outline: none;
     border: none;
-    background-color: #9900ff;
+    background-color:  #6f00b8;
     color: #fff;
     border-radius: 5px;
     font-weight: bold;
     font-size: 1rem;
     padding: 10px 16px;
-    width: 100%;
+    width: 90%;
+    margin-left: 20px;
     transition: 100ms;
     cursor: pointer;
   }
@@ -63,7 +67,7 @@
   
   .footer p span a {
     font-weight: bold;
-    color: #9900ff;
+    color: #aa2aff;
     letter-spacing: 1px;
     font-size: 1rem;
     text-decoration: none;
